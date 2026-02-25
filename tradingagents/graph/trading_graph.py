@@ -121,7 +121,7 @@ def create_llm_by_provider(provider: str, model: str, backend_url: str, temperat
             timeout=timeout
         )
 
-    elif provider.lower() in ["openai", "siliconflow", "openrouter", "ollama", "minimax"]:
+    elif provider.lower() in ["openai", "siliconflow", "openrouter", "ollama"]:
         # 优先使用传入的 API Key，否则从环境变量读取
         if not api_key:
             if provider.lower() == "siliconflow":
